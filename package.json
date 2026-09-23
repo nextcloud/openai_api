@@ -1,0 +1,46 @@
+{
+	"name": "openai_api",
+	"version": "1.0.0",
+	"description": "OpenAI-compatible API for Nextcloud",
+	"type": "module",
+	"license": "AGPL-3.0-or-later",
+	"author": "Nextcloud GmbH and Nextcloud contributors",
+	"private": true,
+	"scripts": {
+		"build": "NODE_ENV=production vite --mode production build",
+		"dev": "NODE_ENV=development vite --mode development build",
+		"watch": "NODE_ENV=development vite --mode development build --watch",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"stylelint": "stylelint 'src/**/*.{css,scss,vue}'",
+		"stylelint:fix": "stylelint 'src/**/*.{css,scss,vue}' --fix"
+	},
+	"browserslist": [
+		"extends @nextcloud/browserslist-config"
+	],
+	"engines": {
+		"node": "^24.0.0",
+		"npm": "^11.3.0"
+	},
+	"dependencies": {
+		"@nextcloud/axios": "^2.5.1",
+		"@nextcloud/dialogs": "^7.3.0",
+		"@nextcloud/initial-state": "^3.0.0",
+		"@nextcloud/l10n": "^3.2.0",
+		"@nextcloud/logger": "^3.0.2",
+		"@nextcloud/password-confirmation": "^6.0.2",
+		"@nextcloud/router": "^3.0.1",
+		"@nextcloud/vue": "^9.5.0",
+		"vue": "^3.5.16"
+	},
+	"devDependencies": {
+		"@nextcloud/browserslist-config": "^3.0.1",
+		"@nextcloud/eslint-config": "^9.0.1",
+		"@nextcloud/stylelint-config": "^3.2.2",
+		"@nextcloud/vite-config": "^2.3.5",
+		"eslint": "^10.10.0",
+		"sass": "^1.83.0",
+		"stylelint": "^17.15.0",
+		"typescript": "^5.7.0"
+	}
+}
